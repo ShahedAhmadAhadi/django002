@@ -10,8 +10,13 @@
 <body>
     {% block body %}
 
-    {% for item in  %}
-    <h1>This is header</h1>
+    {% for item in workers %}
+        <ul>
+            <li>
+                <a href="#">{{item.id}} {{item.w_name}}</a>
+            </li>
+        </ul>
+    {% endfor %}
     {% endblock %}
 
 </body>
