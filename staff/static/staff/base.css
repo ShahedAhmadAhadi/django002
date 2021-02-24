@@ -21,3 +21,24 @@ nav a{
 nav a:hover{
     text-decoration: underline;
 }
+#ul{
+    display: flex;
+    flex-direction: column;
+}
+li{
+    list-style: none;
+}
+h3{
+    display: inline-block;
+    width: 100px;
+}
+li a{
+    grid-column: 3/6;
+    font-size: 1.1rem;
+    text-decoration: none;
+    background-color: #129943;
+    padding: 0.325rem 1.4rem;
+    border: 1px solid #129943;
+    border-radius: 5px;
+    color: white;
+}

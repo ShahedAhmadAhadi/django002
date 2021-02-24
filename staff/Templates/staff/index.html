@@ -1,5 +1,4 @@
 {% extends './base.html' %}
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'staff/style.css' %}">
 </head>
 <body>
-    {% block body %}
-
+    {% block body %}    
     <ul id="ul">
     {% for item in workers %}
         <li>
-            <h3>{{item.id}} {{item.w_name}}</h3>
+            <h3>{{item.w_name}}</h3>
             <a href="{% url 'detail' item.id %}">Details</a>
         </li>
     {% endfor %}
