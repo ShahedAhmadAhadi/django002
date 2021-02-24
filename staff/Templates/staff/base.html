@@ -1,4 +1,5 @@
-{% extends './base.html' %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'staff/base.css' %}">
 </head>
 <body>
-    {% block body %}
+    <nav class="">
+        <a href="#">Company</a>
 
-    {% for item in  %}
-    <h1>This is header</h1>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">All Staff</a>
+        </div>
+    </nav>
+
+    {% block body %}
     {% endblock %}
 
 </body>
