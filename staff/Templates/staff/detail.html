@@ -10,17 +10,33 @@
 </head>
 <body>
     {% block body %}
-        <div>
-            <img src="{% static 'staff/a.jpg' %}" alt="">
+    <div id="contain">
+        <div id="img">
+            <img src="{% static 'staff/a.jpeg' %}" alt="">
         </div>
-        <div>
-            {{detail.w_name}}
-            {{detail.w_field}}
-            {{detail.w_phone}}
-            {{detail.w_email}}
-            {{detail.w_age}}
+        <div id="detail">
+            <span>
+                Name: {{detail.w_name}}
+            </span>
+            <span>
+                age: {{detail.w_age}}
+            </span>
+            <span>
+                Position: {{detail.w_field}}
+            </span>
+            <span>
+                Phone: {{detail.w_phone}}
+            </span>
+            <span>
+                E-mail: {{detail.w_email}}
+            </span>     
+            <div id="btn-div">
+                <a href="{% url 'main' %}"><button id="btn">Back</button></a>
+            </div>
         </div>
-        <button><a href="#">Back</a></button>
+        
+    </div>
+        
     {% endblock %}
 </body>
 </html>
