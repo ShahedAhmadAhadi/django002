@@ -13,7 +13,7 @@
     {% for item in workers %}
         <ul>
             <li>
-                <a href="#">{{item.id}} {{item.w_name}}</a>
+                <a href="{% url 'detail' item.id %}">{{item.id}} {{item.w_name}}</a>
             </li>
         </ul>
     {% endfor %}
