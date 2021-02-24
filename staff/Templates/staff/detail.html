@@ -1,3 +1,5 @@
+{% extends './base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+    {% block body %}
+        <div>
+            <img src="{% static 'staff/a.jpg' %}" alt="">
+        </div>
+        <div>
+            {{detail.w_name}}
+            {{detail.w_field}}
+            {{detail.w_phone}}
+            {{detail.w_email}}
+            {{detail.w_age}}
+        </div>
+        <button><a href="#">Back</a></button>
+    {% endblock %}
 </body>
 </html>

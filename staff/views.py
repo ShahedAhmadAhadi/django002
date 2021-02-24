@@ -18,6 +18,6 @@ def detail(request, w_id):
     context = {
         'detail': worker_detail,
     }
-    return render(request, './staff/index.html', context)
+    return render(request, './staff/detail.html', context)
 
     
